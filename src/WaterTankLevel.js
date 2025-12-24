@@ -20,7 +20,7 @@ export default function WaterTankLevel({ totalCapacityMl = 7000 }) {
       // Error นี้จะทำให้ React crash และทำให้เกิด error "Objects are not valid as a React child"
       try {
         console.log("🚀 Trying to connect Tank WS...");
-        socketRef.current = new WebSocket("ws://localhost:8000/ws/tanklevel");
+        socketRef.current = new WebSocket("ws://localhost:8000/tanklevel");
 
         socketRef.current.onopen = () => {
           console.log("✅ Tank WebSocket connected");
